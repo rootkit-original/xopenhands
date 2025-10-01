@@ -2,14 +2,32 @@
 
 ## 🚀 Configuração Rápida
 
+### Configurar Gemini (Modelo de IA)
+Por padrão, xCloudAi está configurado para usar o Gemini 2.5 Flash. Para começar:
+
+1. **Obtenha sua chave de API do Google AI Studio**: https://aistudio.google.com/app/apikey
+2. **Configure a chave de API**:
+   - Na interface web: Configure nas Configurações (Settings)
+   - No CLI/Headless: Edite o arquivo `config.template.toml` e adicione sua chave:
+     ```toml
+     [llm]
+     api_key = "sua-chave-aqui"
+     model = "gemini/gemini-2.5-flash"
+     ```
+
 ### Executar xCloudAi
 ```bash
 # Executar com Docker (Recomendado)
 bash /workspaces/OpenHands/dev-setup.sh docker
 
+# Ou usando o CLI (abre o navegador automaticamente)
+openhands serve
+
 # Parar todos os serviços
 bash /workspaces/OpenHands/dev-setup.sh stop
 ```
+
+> **Nota**: Ao usar `openhands serve`, o navegador será aberto automaticamente após 5 segundos para acessar http://localhost:3000
 
 ## 📁 Estrutura do Projeto
 
@@ -136,9 +154,14 @@ curl http://localhost:3000/api/options/config
 
 ## 🌐 Acessos
 
+### Usando dev-setup.sh (Docker local):
 - **Interface Web**: http://localhost:4001
 - **API Backend**: http://localhost:4001/api/
 - **Documentação API**: http://localhost:4001/docs (quando backend local)
+
+### Usando openhands serve:
+- **Interface Web**: http://localhost:3000 (abre automaticamente)
+- **API Backend**: http://localhost:3000/api/
 
 ## 📚 Recursos Adicionais
 
