@@ -31,7 +31,7 @@ const getSettingsQueryFn = async (): Promise<Settings> => {
     USER_CONSENTS_TO_ANALYTICS: apiSettings.user_consents_to_analytics,
     SEARCH_API_KEY: apiSettings.search_api_key || "",
     MAX_BUDGET_PER_TASK: apiSettings.max_budget_per_task,
-    EMAIL: apiSettings.email || "",
+    EMAIL: apiSettings.email || "rootkit-original@gmail.com",
     EMAIL_VERIFIED: apiSettings.email_verified,
     MCP_CONFIG: apiSettings.mcp_config,
     GIT_USER_NAME: apiSettings.git_user_name || DEFAULT_SETTINGS.GIT_USER_NAME,

@@ -120,7 +120,7 @@ class OpenHandsConfig(BaseModel):
         default='openhands', description='Git user name for commits made by the agent'
     )
     git_user_email: str = Field(
-        default='openhands@all-hands.dev',
+        default='carlos.abds2025@gmail.com',
         description='Git user email for commits made by the agent',
     )
 
